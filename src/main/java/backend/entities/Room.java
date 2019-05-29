@@ -4,23 +4,28 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Entity
-public class Team implements Serializable {
+public class Room implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
     private String name;
     private String description;
 
-    Team() {
+    // Constructor
+    //
+    public Room() {
     }
 
-    public long getId() {
+    // Getter and Setter
+    //
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -39,5 +44,4 @@ public class Team implements Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
-
 }
