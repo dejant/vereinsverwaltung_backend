@@ -1,0 +1,4 @@
+testproject\entities\Person.class
+testproject\restController\PersonRestController.class
+testproject\repositories\PersonRepository.class
+testproject\testApplication.class
