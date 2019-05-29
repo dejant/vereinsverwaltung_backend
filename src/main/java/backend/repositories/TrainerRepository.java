@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface TrainerRepository extends JpaRepository<Trainer, Long> {
-    List<Trainer> findAllByOrderByName();
+    List<Trainer> findAllByOrderByLName();
 
-    Optional<Trainer> findByName(String name);
 }

@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface MaterialmanagerRepository extends JpaRepository<Materialmanager, Long> {
-    List<Materialmanager> findAllByOrderByName();
+    List<Materialmanager> findAllByOrderByLName();
 
-    Optional<Materialmanager> findByName(String name);
 }
