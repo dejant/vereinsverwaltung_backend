@@ -2,7 +2,6 @@ package backend.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.lang.reflect.Member;
 import java.util.Date;
 import java.util.Set;
 
@@ -24,6 +23,15 @@ public class Person implements Serializable {
     private Boolean PowerUser;
     private String EntryDate;
     private String LeaveDate;
+
+    @OneToMany
+    private Set<Trainer> trainer;
+
+    @OneToMany
+    private Set<Member> member;
+
+    @OneToMany
+    private Set<Roommanager> roommanagers;
 
     // constructor
     //

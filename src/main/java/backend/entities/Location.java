@@ -2,6 +2,7 @@ package backend.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 public class Location implements Serializable {
@@ -9,6 +10,12 @@ public class Location implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+
+    @ManyToOne
+    private Material material;
+
+    @ManyToOne
+    private Room room;
 
     Location() {
     }

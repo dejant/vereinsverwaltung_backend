@@ -11,10 +11,15 @@ public
 class Material implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-
     private Long id;
     private String name;
     private String description;
+
+    @OneToMany
+    private Set<Location> Locations;
+
+    @ManyToMany
+    List<Materialmanager> materialmanager = new ArrayList<Materialmanager>();
 
     public Material() {
     }

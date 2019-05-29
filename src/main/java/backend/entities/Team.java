@@ -13,6 +13,12 @@ public class Team implements Serializable {
     private String name;
     private String description;
 
+    @ManyToMany
+    List<Trainer> trainers = new ArrayList<Trainer>();
+
+    @ManyToMany
+    List<Member> members = new ArrayList<Member>();
+
     Team() {
     }
 

@@ -9,6 +9,12 @@ import java.util.Set;
 @Entity
 public class Roommanager extends Person implements Serializable {
 
+    @ManyToOne
+    private Person person;
+
+    @ManyToMany
+    List<Room> rooms = new ArrayList<Room>();
+
     public Roommanager() {
     }
 }

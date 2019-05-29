@@ -9,6 +9,12 @@ import java.util.Set;
 @Entity
 public class Trainer extends Person {
 
+    @ManyToOne
+    private Person person;
+
+    @ManyToMany
+    List<Team> teams = new ArrayList<Team>();
+
     // constructor
     //
     public Trainer() {

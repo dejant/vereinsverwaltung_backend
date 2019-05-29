@@ -2,6 +2,8 @@ package backend.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Schedule implements Serializable {
@@ -14,6 +16,9 @@ public class Schedule implements Serializable {
     private String enddate;
     private String googlemapref;
     private String filepath;
+
+    @ManyToMany
+    List<Person> persons = new ArrayList<Person>();
 
     public Schedule() {
     }

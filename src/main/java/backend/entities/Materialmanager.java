@@ -9,6 +9,12 @@ import java.util.Set;
 @Entity
 public class Materialmanager extends Person{
 
+    @ManyToOne
+    private Person person;
+
+    @ManyToMany
+    List<Material> material = new ArrayList<Material>();
+
     public Materialmanager() {
     }
 

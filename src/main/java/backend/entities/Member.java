@@ -9,6 +9,12 @@ import java.util.Set;
 @Entity
 public class Member extends Person implements Serializable {
 
+    @ManyToOne
+    private Person person;
+
+    @ManyToMany
+    List<Team> teams = new ArrayList<Team>();
+
     public Member() {
     }
 

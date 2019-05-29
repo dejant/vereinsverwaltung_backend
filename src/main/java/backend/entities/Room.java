@@ -14,6 +14,12 @@ public class Room implements Serializable {
     private String name;
     private String description;
 
+    @OneToMany
+    private Set<Location> locations;
+
+    @ManyToMany
+    List<Roommanager> roommanager = new ArrayList<Roommanager>();
+
     // Constructor
     //
     public Room() {
