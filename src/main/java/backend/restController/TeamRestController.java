@@ -23,12 +23,12 @@ public class TeamRestController {
     }
 
     @GetMapping("/team")
-    List<Team> all() {
+    public List<Team> all() {
         return repository.findAll();
     }
 
     @PostMapping("/team")
-    Team newTeam(@RequestBody Team newTeam) {
+    public Team newTeam(@RequestBody Team newTeam) {
         return repository.save(newTeam);
     }
 }

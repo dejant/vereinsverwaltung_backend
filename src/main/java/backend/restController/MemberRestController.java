@@ -22,12 +22,12 @@ public class MemberRestController {
     }
 
     @GetMapping("/member")
-    List<Member> all() {
+    public List<Member> all() {
         return repository.findAll();
     }
 
     @PostMapping("/member")
-    Member newMember(@RequestBody Member newMember) {
+    public Member newMember(@RequestBody Member newMember) {
         return repository.save(newMember);
     }
 }

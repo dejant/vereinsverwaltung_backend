@@ -22,12 +22,12 @@ public class RoommanagerRestController {
     }
 
     @GetMapping("/roommanager")
-    List<Roommanager> all() {
+    public List<Roommanager> all() {
         return repository.findAll();
     }
 
     @PostMapping("/roommanager")
-    Roommanager newRoommanager (@RequestBody Roommanager newRoommanager) {
+    public Roommanager newRoommanager (@RequestBody Roommanager newRoommanager) {
         return repository.save(newRoommanager);
     }
 }

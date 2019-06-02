@@ -22,12 +22,12 @@ public class ScheduleRestController {
     }
 
     @GetMapping("/schedule")
-    List<Schedule> all() {
+    public List<Schedule> all() {
         return repository.findAll();
     }
 
     @PostMapping("/schedule")
-    Schedule newSchedule(@RequestBody Schedule newSchedule) {
+    public Schedule newSchedule(@RequestBody Schedule newSchedule) {
         return repository.save(newSchedule);
     }
 }

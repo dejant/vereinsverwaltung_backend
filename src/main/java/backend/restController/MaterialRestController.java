@@ -22,12 +22,12 @@ public class MaterialRestController {
     }
 
     @GetMapping("/material")
-    List<Material> all() {
+    public List<Material> all() {
         return repository.findAll();
     }
 
     @PostMapping("/material")
-    Material newMaterial(@RequestBody Material newMaterial) {
+    public Material newMaterial(@RequestBody Material newMaterial) {
         return repository.save(newMaterial);
     }
 }

@@ -22,12 +22,12 @@ public class LocationRestController {
     }
 
     @GetMapping("/location")
-    List<Location> all() {
+    public List<Location> all() {
         return repository.findAll();
     }
 
     @PostMapping("/location")
-    Location newLocation(@RequestBody Location newLocation) {
+    public Location newLocation(@RequestBody Location newLocation) {
         return repository.save(newLocation);
     }
 }

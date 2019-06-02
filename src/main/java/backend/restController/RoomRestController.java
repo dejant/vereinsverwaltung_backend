@@ -23,12 +23,12 @@ public class RoomRestController {
     }
 
     @GetMapping("/room")
-    List<Room> all() {
+    public List<Room> all() {
         return repository.findAll();
     }
 
     @PostMapping("/room")
-    Room newRoom(@RequestBody Room newRoom) {
+    public Room newRoom(@RequestBody Room newRoom) {
         return repository.save(newRoom);
     }
 }

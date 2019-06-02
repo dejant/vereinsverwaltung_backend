@@ -23,12 +23,12 @@ public class TrainerRestController {
     }
 
     @GetMapping("/trainer")
-    List<Trainer> all() {
+    public List<Trainer> all() {
         return repository.findAll();
     }
 
     @PostMapping("/trainer")
-    Trainer newTrainer(@RequestBody Trainer newTrainer) {
+    public Trainer newTrainer(@RequestBody Trainer newTrainer) {
         return repository.save(newTrainer);
     }
 }

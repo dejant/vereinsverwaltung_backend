@@ -22,12 +22,12 @@ public class MaterialmanagerRestController {
     }
 
     @GetMapping("/materialmanager")
-    List<Materialmanager> all() {
+    public List<Materialmanager> all() {
         return repository.findAll();
     }
 
     @PostMapping("/materialmanager")
-    Materialmanager newMaterialmanager(@RequestBody Materialmanager newMaterialmanager) {
+    public Materialmanager newMaterialmanager(@RequestBody Materialmanager newMaterialmanager) {
         return repository.save(newMaterialmanager);
     }
 }
